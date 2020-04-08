@@ -1,0 +1,225 @@
+body {
+  font-family: sans-serif;
+  background: #212121;
+  color: #edffff;
+}
+
+main {
+  width: 80%;
+  max-width: 48em;
+  margin: 3em auto;
+}
+main h1 {
+  color: #86ddff;
+  font-size: 3em;
+  font-weight: 700;
+  margin: 1em 0;
+}
+main nav {
+  display: flex;
+  justify-content: flex-end;
+}
+main nav button {
+  font-size: 1.5em;
+  background: #212121;
+  color: #86ddff;
+  border: none;
+  box-shadow: 0 0 0 0.125rem #86ddff;
+  padding: 0.25em 0.5em;
+  margin: 0.125rem 0;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+main nav button.active {
+  background: #86ddff;
+  color: #212121;
+}
+main nav button:hover {
+  background: #86ddff;
+  color: #edffff;
+}
+main ul {
+  box-shadow: 0 0 0 0.125rem #86ddff;
+  padding: 0.5em 1em;
+  margin: 0;
+  list-style: none;
+}
+main ul li {
+  font-family: monospace;
+  font-size: 1.5em;
+  margin: 0.5em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+main ul li span {
+  display: block;
+  font-weight: 400;
+}
+main ul li strong {
+  display: block;
+  text-align: right;
+  margin-left: auto;
+  color: #ffcc63;
+}
+main ul li::before {
+  content: "";
+  width: 1.5em;
+  height: 1em;
+  border-radius: 0.125em;
+  margin-right: 1em;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main ul li.cn::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/cn.svg");
+}
+main ul li.in::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/in.svg");
+}
+main ul li.us::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/us.svg");
+}
+main ul li.id::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/id.svg");
+}
+main ul li.pk::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/pk.svg");
+}
+main ul li.br::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/br.svg");
+}
+main ul li.ng::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ng.svg");
+}
+main ul li.bd::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/bd.svg");
+}
+main ul li.ru::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ru.svg");
+}
+main ul li.jp::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/jp.svg");
+}
+main ul li.mx::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/mx.svg");
+}
+main ul li.ph::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ph.svg");
+}
+main ul li.eg::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/eg.svg");
+}
+main ul li.et::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/et.svg");
+}
+main ul li.vn::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/vn.svg");
+}
+main ul li.cd::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/cd.svg");
+}
+main ul li.ge::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ge.svg");
+}
+main ul li.ir::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ir.svg");
+}
+main ul li.tr::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/tr.svg");
+}
+main ul li.th::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/th.svg");
+}
+main ul li.gb::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg");
+}
+main ul li.fr::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/fr.svg");
+}
+main ul li.it::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/it.svg");
+}
+main ul li.za::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/za.svg");
+}
+main ul li.tz::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/tz.svg");
+}
+main ul li.mm::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/mm.svg");
+}
+main ul li.kr::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/kr.svg");
+}
+main ul li.ke::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ke.svg");
+}
+main ul li.es::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/es.svg");
+}
+main ul li.co::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/co.svg");
+}
+main ul li.ar::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ar.svg");
+}
+main ul li.dz::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/dz.svg");
+}
+main ul li.sd::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/sd.svg");
+}
+main ul li.ua::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ua.svg");
+}
+main ul li.ug::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ug.svg");
+}
+main ul li.iq::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/iq.svg");
+}
+main ul li.pl::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/pl.svg");
+}
+main ul li.ca::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ca.svg");
+}
+main ul li.ma::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ma.svg");
+}
+main ul li.sa::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/sa.svg");
+}
+main ul li.my::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/my.svg");
+}
+main ul li.uz::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/uz.svg");
+}
+main ul li.pe::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/pe.svg");
+}
+main ul li.ve::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ve.svg");
+}
+main ul li.af::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/af.svg");
+}
+main ul li.ao::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ao.svg");
+}
+main ul li.mz::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/mz.svg");
+}
+main ul li.gh::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/gh.svg");
+}
+main ul li.np::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/np.svg");
+}
+main ul li.ye::before {
+  background-image: url("https://lipis.github.io/flag-icon-css/flags/4x3/ye.svg");
+}
