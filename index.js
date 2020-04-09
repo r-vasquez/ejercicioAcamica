@@ -3,10 +3,10 @@
 // ====             (Nada que hacer por aquí...)               ====
 // ================================================================
 
-const countriesUnorderedList = document.getElementById('countries');
+const countriesUnorderedList = document.getElementById('countries') // lista
 
-const sortByPopulationButton = document.getElementById('sortByPopulation');
-const sortByNameButton = document.getElementById('sortByName');
+const sortByPopulationButton = document.getElementById('sortByPopulation') //boton
+const sortByNameButton = document.getElementById('sortByName') // boton
 
 // ================================================================
 // ====       TODO: Completar la función parseCountries        ====
@@ -30,11 +30,19 @@ const sortByNameButton = document.getElementById('sortByName');
 // ================================================================
 
 function parseCountries() {
-  let countries = [];
+  let countries = []
+  let countriesName = Array.from(countriesUnorderedList.getElementsByTagName('span')) //obtengo el arreglo de spans
+  let countriesPop = Array.from(countriesUnorderedList.getElementsByTagName('strong')) //obtengo el arreglo de spans
+  let countriesCode = Array.from(countriesUnorderedList.getElementsByTagName('li')) //obtengo el arreglo de Li
 
-  // Completa aquí la lógica de la función...
-
-  return countries;
+  for (let i = 0; i < countriesName.length; i++) {
+    countries.push({
+      name: countriesName[i].innerText,
+      population: parseInt(countriesPop[i].innerText.replace(/\./g, '')),
+      code: countriesCode[i].className
+    })
+  }
+  return countries
 }
 
 // ================================================================
@@ -48,11 +56,26 @@ function parseCountries() {
 // ====       de la poblacion se muestre tal como estaba       ====
 // ====  al comienzo de la ejecusión (con separador de miles)  ====
 // ================================================================
+function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') //Expresion regular para agregar separador de miles (https://blog.abelotech.com/posts/number-currency-formatting-javascript/)
+}
 
 function displayCountries(countries) {
+  countriesUnorderedList.innerHTML = '' //elimino lo que esté dentro
 
-  // Completa aquí la lógica de la función...
+  // Esta funcion recibe un arreglo de objetos y debe retornar el HTML
+  for (let i = 0; i < countries.length; i++) {
+    const listElement = document.createElement('li')
+    const spanElement = document.createElement('span')
+    const strongElement = document.createElement('strong')
 
+    listElement.classList.add(countries[i].code)
+    spanElement.textContent = countries[i].name
+    strongElement.textContent = formatNumber(countries[i].population)
+
+    listElement.append(spanElement, strongElement)
+    countriesUnorderedList.append(listElement)
+  }
 }
 
 // ================================================================
@@ -64,23 +87,28 @@ function displayCountries(countries) {
 // ================================================================
 
 sortByPopulationButton.addEventListener('click', function () {
-  let countries = parseCountries();
-
+  let countries = parseCountries()
   // Completa aquí la lógica para ordenar por población (de mayor a menor) del arreglo countries
+  countries.sort((a, b) => {
+    return b.population - a.population
+  })
 
-  displayCountries(countries);
+  displayCountries(countries)
 
-  sortByNameButton.className = '';
-  sortByPopulationButton.className = 'active';
-});
+  sortByNameButton.className = ''
+  sortByPopulationButton.className = 'active'
+})
 
 sortByNameButton.addEventListener('click', function () {
-  let countries = parseCountries();
+  let countries = parseCountries()
 
   // Completa aquí la lógica para ordenar por nombre (alfabéticamente) del arreglo countries
+  countries.sort((a, b) => {
+    return b.name > a.name ? -1 : 1
+  })
 
-  displayCountries(countries);
+  displayCountries(countries)
 
-  sortByPopulationButton.className = '';
-  sortByNameButton.className = 'active';
-});
+  sortByPopulationButton.className = ''
+  sortByNameButton.className = 'active'
+})
